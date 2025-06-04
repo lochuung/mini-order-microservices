@@ -1,0 +1,50 @@
+
+
+spring:
+  application:
+    name: order-service
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  datasource:
+    url: jdbc:mysql://localhost:3306/order_db?useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: password
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+
+eureka:
+  client:
+    enabled: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+
+logging:
+  level:
+    vn.huuloc.orderservices: DEBUG
+    org.springframework.kafka: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+server:
+  port: 8081

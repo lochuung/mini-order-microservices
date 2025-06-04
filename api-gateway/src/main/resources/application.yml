@@ -21,6 +21,7 @@ spring:
           enabled: true
           lower-case-service-id: true
 
+
 eureka:
   client:
     service-url:
@@ -42,3 +43,5 @@ logging:
     vn.huuloc.apigateway: DEBUG
   pattern:
     console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+server:
+  port: 8080
