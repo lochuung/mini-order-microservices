@@ -13,6 +13,7 @@ spring:
     username: root
     password: password
   kafka:
+    bootstrap-servers: localhost:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
@@ -36,9 +37,9 @@ management:
     health:
       show-details: always
     metrics:
-      enabled: true
+      access: read_only
     prometheus:
-      enabled: true
+      access: read_only
 
 logging:
   level:

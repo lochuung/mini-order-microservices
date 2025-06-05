@@ -10,8 +10,8 @@
     </parent>
     <artifactId>notification-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>inventory-service</name>
-    <description>inventory-service</description>
+    <name>notification-service</name>
+    <description>notification-service</description>
     <url/>
     <licenses>
         <license/>
@@ -66,6 +66,12 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>vn.huuloc</groupId>
+            <artifactId>common-library</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
     <dependencyManagement>

@@ -1,4 +1,4 @@
-package vn.huuloc.inventoryservice;
+package vn.huuloc.notificationservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

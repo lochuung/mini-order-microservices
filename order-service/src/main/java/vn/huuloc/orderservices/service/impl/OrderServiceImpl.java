@@ -2,14 +2,13 @@ package vn.huuloc.orderservices.service.impl;
 
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
+import vn.huuloc.commonlibrary.event.OrderCreatedEvent;
 import vn.huuloc.orderservices.dto.OrderRequest;
 import vn.huuloc.orderservices.entity.Order;
-import vn.huuloc.orderservices.event.OrderCreatedEvent;
 import vn.huuloc.orderservices.repository.OrderRepository;
 import vn.huuloc.orderservices.service.OrderService;
 
