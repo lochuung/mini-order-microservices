@@ -1,4 +1,4 @@
-package vn.huuloc.orderservices.dto;
+package vn.huuloc.orderservice.dto;
 
 import lombok.Data;
 

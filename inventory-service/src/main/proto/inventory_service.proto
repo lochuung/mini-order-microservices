@@ -1,0 +1,33 @@
+syntax = 'proto3';
+
+option java_package = 'vn.huuloc.grpc';
+option java_outer_classname = 'InventoryServiceProto';
+
+service InventoryService {
+  rpc CheckInventory(CheckInventoryRequest) returns (CheckInventoryResponse);
+  rpc UpdateInventory(UpdateInventoryRequest) returns (UpdateInventoryResponse);
+}
+
+message CheckInventoryRequest {
+  int64 productId = 1;
+  int32 quantity = 2;
+}
+
+message CheckInventoryResponse {
+  int64 productId = 1;
+  int32 availableQuantity = 2;
+  bool isAvailable = 3;
+  string message = 4;
+}
+
+message UpdateInventoryRequest {
+  int64 productId = 1;
+  int32 quantity = 2;
+  string operation = 3; // "RESERVE" or "RELEASE"
+}
+
+message UpdateInventoryResponse {
+  bool success = 1;
+  string message = 2;
+  int32 newQuantity = 3;
+}

@@ -1,13 +1,12 @@
-package vn.huuloc.orderservices.controller;
+package vn.huuloc.orderservice.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import vn.huuloc.commonlibrary.response.ApiResponse;
-import vn.huuloc.orderservices.dto.OrderRequest;
-import vn.huuloc.orderservices.entity.Order;
-import vn.huuloc.orderservices.service.OrderService;
+import vn.huuloc.orderservice.dto.OrderRequest;
+import vn.huuloc.orderservice.entity.Order;
+import vn.huuloc.orderservice.service.OrderService;
 
 @RestController
 @RequestMapping("/api/orders")

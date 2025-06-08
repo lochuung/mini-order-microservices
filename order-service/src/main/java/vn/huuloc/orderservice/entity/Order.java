@@ -1,4 +1,4 @@
-package vn.huuloc.orderservices.entity;
+package vn.huuloc.orderservice.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

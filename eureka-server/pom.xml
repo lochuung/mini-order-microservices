@@ -5,10 +5,11 @@
     <parent>
         <groupId>vn.huuloc</groupId>
         <artifactId>mini-order-microservices</artifactId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>eureka-server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>eureka-server</name>
     <description>eureka-server</description>
     <url/>

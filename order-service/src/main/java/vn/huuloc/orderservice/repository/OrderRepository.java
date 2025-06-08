@@ -1,7 +1,7 @@
-package vn.huuloc.orderservices.repository;
+package vn.huuloc.orderservice.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import vn.huuloc.orderservices.entity.Order;
+import vn.huuloc.orderservice.entity.Order;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
 }
